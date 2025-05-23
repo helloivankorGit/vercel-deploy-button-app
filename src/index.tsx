@@ -33,7 +33,9 @@ const DeployPage = () => {
   return (
     <div style={{ padding: '2rem', maxWidth: '500px' }}>
       <Note noteType="primary">
-        Click the button below to trigger a Vercel deploy.
+        This will trigger a full site rebuild via Vercel. Once the deploy is completed,
+        the latest content updates from Contentful will be live on your website.
+        Cached pages will also be refreshed automatically as part of the build.
       </Note>
 
       <Button
