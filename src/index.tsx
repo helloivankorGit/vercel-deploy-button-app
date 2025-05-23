@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import { init, locations } from '@contentful/app-sdk';
 import { Button, Note } from '@contentful/forma-36-react-components';
 
-const VERCEL_DEPLOY_HOOK_URL = 'https://api.vercel.com/v1/integrations/deploy/prj_ntIToSpEHkZjrqicARSQ2pdocY0i/WgMPsFj5h3';
+const VERCEL_DEPLOY_HOOK_URL = 'https://api.vercel.com/v1/integrations/deploy/prj_xxxx...';
 
 const DeployButton = () => {
   const handleDeploy = async () => {
@@ -32,6 +32,6 @@ const DeployButton = () => {
 init((sdk) => {
   if (sdk.location.is(locations.LOCATION_SIDEBAR)) {
     const root = document.getElementById('root')!;
-    ReactDOM.createRoot(root).render(<DeployButton />);
+    ReactDOM.render(<DeployButton />, root);
   }
 });
