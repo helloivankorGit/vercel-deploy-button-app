@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { init, locations } from '@contentful/app-sdk';
 import { Button, Note } from '@contentful/forma-36-react-components';
 
-const VERCEL_DEPLOY_HOOK_URL = 'https://api.vercel.com/v1/integrations/deploy/prj_xxxx...';
+const VERCEL_DEPLOY_HOOK_URL = 'https://api.vercel.com/v1/integrations/deploy/prj_ntIToSpEHkZjrqicARSQ2pdocY0i/WgMPsFj5h3';
 
 const DeployButton = () => {
   const handleDeploy = async () => {
