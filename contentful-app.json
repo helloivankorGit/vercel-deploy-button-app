@@ -3,7 +3,7 @@
   "src": "https://vercel-deploy-button-app.vercel.app/",
   "locations": [
     {
-      "location": "app-config"
+      "location": "page"
     }
   ]
 }
