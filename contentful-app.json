@@ -1,0 +1,12 @@
+{
+  "name": "Vercel Deploy Trigger",
+  "src": "https://your-deployed-app-url.com",
+  "locations": [
+    {
+      "location": "app-config"
+    },
+    {
+      "location": "sidebar"
+    }
+  ]
+}
