@@ -1,12 +1,9 @@
 {
   "name": "Vercel Deploy Trigger",
-  "src": "https://your-deployed-app-url.com",
+  "src": "https://vercel-deploy-button-app.vercel.app/",
   "locations": [
     {
       "location": "app-config"
-    },
-    {
-      "location": "sidebar"
     }
   ]
 }

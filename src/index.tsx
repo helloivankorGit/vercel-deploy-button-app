@@ -9,29 +9,29 @@ const DeployButton = () => {
   const handleDeploy = async () => {
     try {
       const res = await fetch(VERCEL_DEPLOY_HOOK_URL, { method: 'POST' });
-      if (res.ok) {
-        alert('✅ Deploy triggered successfully!');
-      } else {
-        alert('❌ Failed to trigger deploy.');
-      }
+      alert(res.ok ? '✅ Deploy triggered!' : '❌ Failed to trigger deploy');
     } catch (err) {
       alert('❌ Error: ' + err);
     }
   };
 
   return (
-    <div style={{ padding: '1rem' }}>
-      <Note noteType="primary">Trigger a Vercel rebuild after publishing content.</Note>
+    <div style={{ padding: '2rem' }}>
+      <Note noteType="primary">This will trigger a full rebuild of your site via Vercel.</Note>
       <Button buttonType="positive" onClick={handleDeploy} style={{ marginTop: '1rem' }}>
-        🚀 Trigger Deploy
+        🚀 Trigger Vercel Deploy
       </Button>
     </div>
   );
 };
 
-init((sdk) => {
-  if (sdk.location.is(locations.LOCATION_SIDEBAR)) {
-    const root = document.getElementById('root')!;
-    ReactDOM.render(<DeployButton />, root);
-  }
-});
+if (window.self !== window.top) {
+  init((sdk) => {
+    if (sdk.location.is('app-config')) {
+      const root = document.getElementById('root');
+      if (root) {
+        ReactDOM.render(<DeployButton />, root);
+      }
+    }
+  });
+}
